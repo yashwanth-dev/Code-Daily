@@ -34,19 +34,19 @@ namespace ado_net_basics
 
         private static void ListExpectedtReceipts(SqlConnection con)
         {
-            var cmd = @"SELECT EXPECTEDRECEIPTKEY, EXPECTEDRECEIPTNUMBER, RECEIPTTYPE from dbo.ExpectedReceipt";
+            var cmd = @"<Query>";
             SqlCommand getExpectedReceiptsCmd = new SqlCommand(cmd);
             getExpectedReceiptsCmd.Connection = con;
 
             var reader = getExpectedReceiptsCmd.ExecuteReader();
 
-            int Expected_Receipt_key = reader.GetOrdinal("EXPECTEDRECEIPTKEY");
-            int Expected_Receipt_Number = reader.GetOrdinal("EXPECTEDRECEIPTNUMBER");
-            int Receipt_Type = reader.GetOrdinal("RECEIPTTYPE");
+            int column_1 = reader.GetOrdinal("<column1>");
+            int column_2 = reader.GetOrdinal("<column2>");
+            int column_3 = reader.GetOrdinal("<column3>");
 
             while (reader.Read())
             {
-                Console.WriteLine($"Expected Receipt Key: {reader.GetInt64(Expected_Receipt_key)}\nExpected Receipt Number: {reader.GetInt64(Expected_Receipt_Number)}\nReceipt Type: {reader.GetInt64(Receipt_Type)}\n");
+                Console.WriteLine($"Expected Receipt Key: {reader.GetInt64(column_1)}\nExpected Receipt Number: {reader.GetInt64(column_2)}\nReceipt Type: {reader.GetInt64(column_3)}\n");
             }
             reader.Close();
 
