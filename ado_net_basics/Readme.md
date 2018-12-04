@@ -14,5 +14,20 @@ Add tasks.json file when prompted
 #nuget packages added:
 ado_net_basics.csproj --> Under <ItemGroup>
 
+#ado_net_terms
+SqlConnection
+SqlCommand
+Reader
+
+
 // TODO:
 Implement unit of work pattern where connection opening and closing is taken care of
+
+
+#Unit of Work:
+Keywords:
+Atomic
+Transaction
+TransactionScope Object
+In-Memory collections(maintain and track changes)
+
