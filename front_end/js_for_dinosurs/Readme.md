@@ -7,3 +7,17 @@ https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosa
 require problem in browser vs node
 Node - Uses file system
 Browser - Needs module bundler to find all the require statements
+
+#webpack
+Installing: npm install webpack webpack-cli --save-dev
+Running: ./node_modules/.bin/webpack index.js --mode=development
+development mode keeps the JS files readable.
+Production mode has minified JS file.
+
+Package Manager - Automatically download 3rd party packages - npm
+module bundler - to create one script file - webpack
+transpiler - use future javascript features - babel
+task runner - automate different parts of build process - webpack
+
+
+
