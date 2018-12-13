@@ -1,4 +1,3 @@
-function clickedClickMe() {
-    console.log("Clicked Click Me!");
-    showAlert();
-}
+const moment = require('moment');
+
+console.log(moment().startOf('day').fromNow());
