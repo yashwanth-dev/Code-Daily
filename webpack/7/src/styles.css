@@ -1,0 +1,11 @@
+@font-face{
+    font-family:'my-font';
+    src:url('./MetalMacabre.ttf') format('woff2');
+    font-weight:600;
+    font-style:normal;
+}
+
+.hello {
+    color:aquamarine;
+    font-family:'my-font';
+}
