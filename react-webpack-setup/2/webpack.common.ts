@@ -1,4 +1,3 @@
-import * as path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 import webpack from 'webpack';
@@ -7,11 +6,6 @@ import webpack from 'webpack';
 const webpackConfig: webpack.Configuration = {
 entry:{
     index: './src/index.tsx'
-},
-output: {
-    path: path.resolve(__dirname,'dist'),
-    filename: '[name].bundle.js',
-    chunkFilename:'[name].chunk.js'
 },
 resolve: {
 extensions:[".ts",".tsx",".js",".jsx"]
@@ -32,6 +26,11 @@ module:{
             ]
         }
     ]
+},
+optimization:{
+    splitChunks:{
+        chunks:'all'
+    }
 }
 }
 

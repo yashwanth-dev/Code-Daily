@@ -2,10 +2,15 @@ import webpack from "webpack";
 import webpackMerge from "webpack-merge";
 import webpackConfig from "./webpack.common";
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
 
 const webpackProdConfig : webpack.Configuration = {
 mode:'production',
-// devtool:''
+output: {
+    path: path.resolve(__dirname,'dist'),
+    filename: '[name].bundle.js',
+    chunkFilename:'[name].chunk.js'
+},
 module:{
     rules:[
         {
